@@ -14,7 +14,7 @@ function Entries({ heading, items }: { heading: string; items: Entry[] }) {
           <li key={e.title + e.place} className="border-b border-line py-3 grid grid-cols-[1fr_auto] gap-x-5">
             <span>
               {e.title}
-              <span className="block text-mute">{e.place}</span>
+              {e.place && <span className="block text-mute">{e.place}</span>}
             </span>
             <span className="text-mute">{e.period}</span>
           </li>
@@ -62,7 +62,8 @@ export default function AboutPage() {
           </section>
           <Entries heading="Education" items={about.education} />
           <Entries heading="Experience" items={about.experience} />
-          <Entries heading="Awards" items={about.awards} />
+          <Entries heading="Activities" items={about.activities} />
+          <Entries heading="Awards & Honors" items={about.awards} />
         </div>
 
         <div className="col-span-12 md:col-span-3 md:col-start-10 grid grid-cols-2 md:grid-cols-1 gap-x-5 gap-y-14 content-start">

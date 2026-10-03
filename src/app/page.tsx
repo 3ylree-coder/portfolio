@@ -1,7 +1,10 @@
 import Link from "next/link";
-import { projects } from "@/lib/projects";
+import { caseStudies } from "@/lib/case-studies";
+import { archive, asset, projects } from "@/lib/projects";
 import { site } from "@/lib/site";
 
+const featured = projects.filter((p) => caseStudies[p.id]);
+const others = projects.filter((p) => !caseStudies[p.id]);
 const years = projects.map((p) => Number(p.year));
 const range = `${Math.min(...years)}—${Math.max(...years)}`;
 
@@ -35,15 +38,49 @@ export default function Home() {
       </section>
 
       <section id="work" className="mt-28 md:mt-44">
+        <div className="flex items-end justify-between pb-3 border-b border-line">
+          <p>
+            Case studies <span className="text-mute">({featured.length})</span>
+          </p>
+          <p className="text-title font-medium">Selected</p>
+        </div>
+        <ul className="mt-5 grid md:grid-cols-3 gap-x-5 gap-y-12">
+          {featured.map((p, i) => (
+            <li key={p.id}>
+              <Link href={`/work/${p.id}/`} className="group block">
+                <div className="aspect-[16/10] overflow-hidden">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={asset(caseStudies[p.id].cover)}
+                    alt={p.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                  />
+                </div>
+                <p className="mt-4 flex justify-between text-mute">
+                  <span>({String(i + 1).padStart(2, "0")})</span>
+                  <span>{p.year}</span>
+                </p>
+                <h2 className="mt-1 text-[26px] md:text-[30px] font-medium leading-[1.15] tracking-[-0.03em] group-hover:text-mute transition-colors">
+                  {p.title} <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
+                </h2>
+                <p className="mt-1 text-mute">{p.subtitle}</p>
+                <p className="mt-4 text-[14px] leading-[1.55]">{p.summary}</p>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="mt-28 md:mt-44">
         <div className="flex items-end justify-between pb-3">
           <p>
-            Selected work <span className="text-mute">({projects.length})</span>
+            Other work <span className="text-mute">({others.length})</span>
           </p>
           <p className="text-title font-medium">{range}</p>
         </div>
 
         <ul className="group/list border-t border-line">
-          {projects.map((p, i) => (
+          {others.map((p, i) => (
             <li key={p.id} className="border-b border-line">
               <Link
                 href={`/work/${p.id}/`}
@@ -79,6 +116,21 @@ export default function Home() {
                   →
                 </span>
               </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="mt-28 md:mt-40">
+        <p className="pb-3">
+          Archive <span className="text-mute">({archive.length})</span>
+        </p>
+        <ul className="border-t border-line">
+          {archive.map((a) => (
+            <li key={a.title} className="border-b border-line grid grid-cols-12 gap-x-5 py-3">
+              <span className="col-span-3 md:col-span-2">{a.year}</span>
+              <span className="col-span-9 md:col-span-5 md:border-l md:border-line md:pl-5">{a.title}</span>
+              <span className="col-span-9 col-start-4 md:col-span-5 md:col-start-auto text-mute">{a.note}</span>
             </li>
           ))}
         </ul>
