@@ -25,7 +25,8 @@ jobs:
           cache: npm
       - id: pages
         uses: actions/configure-pages@v5
-      - run: npm ci
+      # npm ci는 다른 OS의 선택적 WASM 패키지 peer 때문에 lockfile 불일치로 실패해서 install 사용
+      - run: npm install --no-audit --no-fund
       - run: npm run build
         env:
           # "/<repo>" for project sites, "" for <user>.github.io
