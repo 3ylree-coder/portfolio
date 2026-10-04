@@ -23,7 +23,7 @@ export const capabilities = [
   {
     title: "실제 행동으로 확인합니다",
     body: "설문, 다이어리 스터디, FGI, Think-aloud로 사람들이 실제로 무엇을 하는지 확인합니다. 데이터가 가설과 다르면 방향을 바꿉니다.",
-    evidence: "설문 95명 · 68명 · 다이어리 스터디 20명 · FGI 20명 · Think-aloud 10명",
+    evidence: "설문 97명 · 68명 · 다이어리 스터디 20명 · FGI 20명 · Think-aloud 10명",
   },
   {
     title: "손에 잡히게 만들어 봅니다",
