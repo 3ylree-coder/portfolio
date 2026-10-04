@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { about, site } from "@/lib/site";
 
-export const metadata: Metadata = { title: `About — ${site.name}` };
+export const metadata: Metadata = { title: `About · ${site.name}` };
 
 type Entry = { title: string; place: string; period: string };
 
@@ -69,6 +69,7 @@ export default function AboutPage() {
         <div className="col-span-12 md:col-span-3 md:col-start-10 grid grid-cols-2 md:grid-cols-1 gap-x-5 gap-y-14 content-start">
           <List heading="Skills" items={about.skills} />
           <List heading="Tools" items={about.tools} />
+          <List heading="Languages" items={about.languages} />
         </div>
       </div>
     </main>
