@@ -145,11 +145,11 @@ export const caseStudies: Record<string, CaseStudy> = {
     gap: "서비스와 사용자",
     cover: "/images/travel-wallet/hero.jpg",
     glance: {
-      role: "UX 리서치 · 유저 플로우 · UI",
+      role: "설문 설계·분석 · D-day와 환율 파도 아이디어 · 유저 플로우 · UI",
       team: "KAIST-NH투자증권 UX디자인연구센터 · 5인",
       period: "2026 상반기 · 최종 보고 2026.04.10",
       methods: "현재 서비스 분석 · 레퍼런스 분석 · 설문조사",
-      outcome: "최종 화면 9종과 범위 밖 제안 3종을 NH투자증권에 보고",
+      outcome: "최종 화면 9종과 범위 밖 제안 3종 보고 → NH투자증권 서비스 반영 결정, 개발 진행 중",
     },
     skills: [],
     sections: [
@@ -233,9 +233,10 @@ export const caseStudies: Record<string, CaseStudy> = {
       },
       {
         label: "Result",
-        title: "화면 9종과 범위 밖 제안 3종을 NH에 보고했다",
+        title: "화면 9종과 범위 밖 제안 3종을 보고했고, NH가 서비스 반영을 결정했다",
         body: [
           "2026년 4월 10일, 최종 화면 9종(메인 화면, 계좌 카드, 계좌별 콘텐츠, 환율, 투자 상품, D-day RP 제안, 여행지 배경, 타임라인, 통합 잔고)과 범위 밖 제안 3종(RP 웹 단순화, 일러스트, 일정 등록 UI)을 보고했습니다.",
+          "이후 NH투자증권이 실제 서비스에 반영하기로 결정해, 지금 개발이 진행 중입니다.",
         ],
       },
     ],
