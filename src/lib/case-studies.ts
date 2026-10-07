@@ -183,7 +183,6 @@ export const caseStudies: Record<string, CaseStudy> = {
         ],
         stats: [
           { value: "46.4%", label: "여행 직전처럼 필요할 때 바로 충전하는 편의형 (계획형 34%, 전략형 15.5%)" },
-          { value: "68%", label: "편의형 중 여행 후 남은 외화를 원화로 바꾸지 않음" },
           { value: "64%", label: "남은 외화를 투자로 옮길 의향 (78명 중 50명). 걸림돌은 복잡한 절차" },
         ],
       },
