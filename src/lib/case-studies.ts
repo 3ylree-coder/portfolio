@@ -146,7 +146,7 @@ export const caseStudies: Record<string, CaseStudy> = {
     cover: "/images/travel-wallet/hero.jpg",
     glance: {
       role: "설문 설계·분석 · D-day와 환율 파도 아이디어 · 유저 플로우 · UI",
-      team: "KAIST-NH투자증권 UX디자인연구센터 · 5인",
+      team: "KAIST-NH투자증권 UX디자인연구센터 · 디자인 학부생 4명 + 대학원생 1명(기업 소통·피드백)",
       period: "2026 상반기 · 최종 보고 2026.04.10",
       methods: "현재 서비스 분석 · 레퍼런스 분석 · 설문조사",
       outcome: "최종 화면 9종과 범위 밖 제안 3종 보고 → NH투자증권 서비스 반영 결정, 개발 진행 중",

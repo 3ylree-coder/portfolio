@@ -103,7 +103,7 @@ export const projects: Project[] = [
       "트래블월렛 × NH투자증권 '여행자금 모으기'를 개편했습니다. 상품이 RP에서 주식으로 넓어지는 데 맞춰 화면의 중심을 수익률에서 여행 D-day로 옮겼습니다. NH투자증권이 서비스 반영을 결정해 개발이 진행 중입니다.",
     points: [],
     tags: ["Fintech", "Survey", "Mobile UI"],
-    team: ["5인 팀"],
+    team: ["학부생 4인 + 대학원생 1인"],
     tools: ["Figma"],
     images: ["/images/travel-wallet/hero.jpg", "/images/travel-wallet/accounts.jpg", "/images/travel-wallet/trip-state.jpg", "/images/travel-wallet/timeline.jpg"],
   },
